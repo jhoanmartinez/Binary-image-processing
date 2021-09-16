@@ -21,7 +21,7 @@ dilation_1 = cv2.dilate(thresh, kernel_1)
 
 kernel_size_2 = (3, 3)
 kernel_2 = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, kernel_size_2)
-dilation_2 = cv2.dilate(thresh, kernel_2)
+dilation_2 = cv2.dilate(thresh, kernel_2, iterations=9)
 
 cv2.imshow("original", img)
 cv2.imshow("gray", gray_img)
